@@ -35,7 +35,7 @@ public class FillMe {
     public static void fill(File f) throws FileNotFoundException, IOException {
         long start = System.currentTimeMillis();    //start time
         RandomAccessFile g = new RandomAccessFile(f, "rw"); //create a file stream inside file f
-        g.setLength(50/*f.getUsableSpace()*/); //set the size of f to the total size of the drive
+        g.setLength(f.getUsableSpace()); //set the size of f to the total size of the drive
         
 
         //stats
